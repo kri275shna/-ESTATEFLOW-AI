@@ -1,7 +1,7 @@
 # EstateFlow AI — Technical Design Document (TDD)
 
 **Project Name:** EstateFlow AI  
-**Repository URL:** [https://github.com/developer-evaluation/estateflow-ai](https://github.com/developer-evaluation/estateflow-ai)  
+**Repository URL:** [https://github.com/kri275shna/-ESTATEFLOW-AI](https://github.com/kri275shna/-ESTATEFLOW-AI)  
 **Client Problem Statement:** Company A, Residential Property Developer in Ahmedabad  
 **Evaluation Role:** Senior Full-Stack Software Architect & Technical Lead  
 **Document Version:** 1.0.0 (MVP Release)  

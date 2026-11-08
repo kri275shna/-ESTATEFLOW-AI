@@ -1,7 +1,7 @@
 # EstateFlow AI — Deployment & Local Setup Guide
 
 > **Client:** Company A, Residential Property Developer (Ahmedabad, Gujarat)  
-> **Repository:** [https://github.com/developer-evaluation/estateflow-ai](https://github.com/developer-evaluation/estateflow-ai) *(Replace with your public repo URL)*  
+> **Repository:** [https://github.com/kri275shna/-ESTATEFLOW-AI](https://github.com/kri275shna/-ESTATEFLOW-AI)  
 > **Specification:** End-to-End Real Estate Lead Management & AI Assistant MVP  
 > **Compliance:** Gujarat RERA & Digital Personal Data Protection (DPDP) Act 2023  
 
@@ -31,8 +31,8 @@ The database is pre-seeded with realistic Ahmedabad residential developer sample
 
 ### Step A: Clone the Repository
 ```bash
-git clone https://github.com/developer-evaluation/estateflow-ai.git
-cd estateflow-ai
+git clone https://github.com/kri275shna/-ESTATEFLOW-AI.git
+cd -ESTATEFLOW-AI
 ```
 
 ### Step B: Backend Setup (FastAPI & SQLAlchemy)
