@@ -1,0 +1,50 @@
+version: "3.8"
+
+services:
+  db:
+    image: postgres:15-alpine
+    container_name: estateflow-postgres
+    restart: always
+    environment:
+      POSTGRES_USER: estateflow
+      POSTGRES_PASSWORD: estateflow_secure_password
+      POSTGRES_DB: estateflow
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U estateflow"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: estateflow-backend
+    restart: always
+    environment:
+      - DATABASE_URL=postgresql://estateflow:estateflow_secure_password@db:5432/estateflow
+      - SECRET_KEY=estateflow-super-secret-jwt-key-2026-ahmedabad-core-build
+      - ENVIRONMENT=production
+    ports:
+      - "8000:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: estateflow-frontend
+    restart: always
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+
+volumes:
+  postgres_data:
